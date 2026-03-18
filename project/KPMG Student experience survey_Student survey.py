@@ -7,10 +7,12 @@ import streamlit as st
 
 output_file = "output.txt" 
 
-def write_to_output(data,output_file):
-    with open(output_file, 'a+', encoding='utf-8') as f:
-        f.write('\n' + str(data))
+#def write_to_output(data,output_file):
+#    with open(output_file, 'a+', encoding='utf-8') as f:
+#        f.write('\n' + str(data))
 
+def write_to_output(data,output_file):
+        st.write('\n' + str(data))
 
 ###################################################################################
 
