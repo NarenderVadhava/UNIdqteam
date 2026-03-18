@@ -749,6 +749,7 @@ def run():
         )
         df.replace(np.nan, '', regex=True)
         total_comp = df.shape[0]
+        st.write(total_comp)
         unique_identifier = "respid"
         run_time = datetime.datetime.now().strftime("%Y-%m-%d %I-%M-%S %p")
         write_to_output(f'\n\n------------------Total Completes: {total_comp} @ {run_time} \n\n',output_file)
