@@ -737,10 +737,12 @@ def mprsp_exactly(quests, arguments, req_rsp):
             output_file)
 def run():
     global df, record, unique_identifier
+    st.write("Run start1")    
     uploaded_file = st.file_uploader("Upload Excel", type=["xlsx", "xls"])
     if uploaded_file:
         if os.path.exists(output_file):
             os.remove(output_file)
+        st.write("Run start2")        
         df = pd.read_excel(
             uploaded_file, 
             header=1,
@@ -753,7 +755,7 @@ def run():
         unique_identifier = "respid"
         run_time = datetime.datetime.now().strftime("%Y-%m-%d %I-%M-%S %p")
         write_to_output(f'\n\n------------------Total Completes: {total_comp} @ {run_time} \n\n',output_file)
-
+        st.write("Run start3")
         for record in range(0, total_comp):
             sprsp("Q1", [
                 "Yes"
