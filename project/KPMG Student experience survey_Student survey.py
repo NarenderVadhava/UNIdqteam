@@ -744,7 +744,8 @@ def run():
             os.remove(output_file)
         st.write("Run start2")        
         df = pd.read_excel(
-            uploaded_file, 
+            uploaded_file,
+            engine="openpyxl",
             header=1,
             sheet_name='WithValueAsLabels',
             na_filter=False
