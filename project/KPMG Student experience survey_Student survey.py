@@ -12,7 +12,7 @@ output_file = "output.txt"
 #        f.write('\n' + str(data))
 
 def write_to_output(data,output_file):
-        st.metric('\n' + str(data))
+        st.metric(value=str(data))
 
 ###################################################################################
 
