@@ -1,5 +1,7 @@
 import streamlit as st
 import importlib
+import pandas
+import openpyxl
 import os
 
 st.set_page_config(page_title="Python Validation`", layout="wide")
