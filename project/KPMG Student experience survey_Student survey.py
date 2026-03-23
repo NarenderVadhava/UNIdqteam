@@ -984,12 +984,12 @@ def run():
                 "Improved diversity, equity, and inclusion"],["Not Selected"])
             else:
                 nullcheck_arg([["Q20r1","Q20r2","Q20r3","Q20r4","Q20r5","Q20r6","Q20r7","Q20r8","Q20r9","Q20r10","Q20r11","Q20r12","Q20r13","Q20r14"]])
-        if os.path.exists(output_file):
-            with open(output_file, "rb") as f:
-                st.download_button(
-                    label="Download Output File",
-                    data=f,
-                    file_name="output.txt",
-                    mime="text/plain"
-                )
+        #if os.path.exists(output_file):
+         #   with open(output_file, "rb") as f:
+          #      st.download_button(
+           #         label="Download Output File",
+            #        data=f,
+             #       file_name="output.txt",
+              #      mime="text/plain"
+               # )
 
