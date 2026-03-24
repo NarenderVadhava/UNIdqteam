@@ -743,13 +743,9 @@ def run():
         if os.path.exists(output_file):
             os.remove(output_file)
         st.write("Run start2")        
-        df = pd.read_excel(uploaded_file)
-        st.dataframe(df)    
+        df = pd.read_excel(uploaded_file,engine="openpyxl",na_filter=False,header=1)
+        #st.dataframe(df)
         st.write("Run start3")    
-#            engine="openpyxl",
-            #na_filter=False
-            #header=1,
-            
         df.replace(np.nan, '', regex=True)
         total_comp = df.shape[0]
         st.write(total_comp)
