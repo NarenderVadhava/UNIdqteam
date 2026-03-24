@@ -744,12 +744,14 @@ def run():
             os.remove(output_file)
         st.write("Run start2")        
         df = pd.read_excel(
-            uploaded_file,
-            header=1,
-            sheet_name='WithValueAsLabels',
-            na_filter=False
+            uploaded_file)
+            sheet_name='WithValueAsLabels'
         )
+        st.write("Run start3")    
 #            engine="openpyxl",
+            #na_filter=False
+            #header=1,
+            
         df.replace(np.nan, '', regex=True)
         total_comp = df.shape[0]
         st.write(total_comp)
