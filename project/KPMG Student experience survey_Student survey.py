@@ -743,10 +743,8 @@ def run():
         if os.path.exists(output_file):
             os.remove(output_file)
         st.write("Run start2")        
-        df = pd.read_excel(
-            uploaded_file,
-            sheet_name='WithValueAsLabels'
-        )
+        df = pd.read_excel(uploaded_file)
+        st.dataframe(df)    
         st.write("Run start3")    
 #            engine="openpyxl",
             #na_filter=False
