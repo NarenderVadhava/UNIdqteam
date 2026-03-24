@@ -745,11 +745,11 @@ def run():
         st.write("Run start2")        
         df = pd.read_excel(
             uploaded_file,
-            engine="openpyxl",
             header=1,
             sheet_name='WithValueAsLabels',
             na_filter=False
         )
+#            engine="openpyxl",
         df.replace(np.nan, '', regex=True)
         total_comp = df.shape[0]
         st.write(total_comp)
